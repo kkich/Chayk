@@ -1,0 +1,19 @@
+fun main(){
+    var balance:Double = 35000.0
+    print ("How much money do you want to withdraw?")
+    val amount = readLine()?.toIntOrNull ()
+    if (amount != null && amount <= balance) {
+        val NewBalance = balance - amount
+        println("Funds withdraw. Remainder: $NewBalance")
+    }
+    else
+        println("There are not enough funds. Do you want to know your account balance (1.yes/2.no)")
+        val choice = readLine()
+    when(choice){
+        "1" -> println("Account balance: $balance")
+        "2" -> println("Thank you. Bye")
+        else -> println("Incorrect input. Bye")
+
+    }
+
+}
